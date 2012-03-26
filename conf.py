@@ -35,7 +35,7 @@ website = 'http://be.groovie.org/'
 disqus_shortname = 'groovieblog'
 
 # Change your favicon (new favicon goes in _static directory)
-html_favicon = 'favicon.png'
+html_favicon = 'tinkerer.ico'
 
 # Pick another Tinkerer theme or use your own
 html_theme = "minimal"
