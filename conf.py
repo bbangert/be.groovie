@@ -69,7 +69,12 @@ exclude_patterns = ["drafts/*"]
 
 # Add templates to be rendered in sidebar here
 html_sidebars = {
-    "**": ["recent.html", "searchbox.html"]
+    "**": [
+        "aboutme.html",
+        "searchbox.html",
+        "elsewhere.html",
+        "recent.html",
+    ]
 }
 
 graphviz_output_format = "svg"
