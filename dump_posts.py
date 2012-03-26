@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import json
 import re
 import os
@@ -38,12 +39,14 @@ def dump_posts(posts):
             print post
             f.writelines([post['title'].encode('utf-8'), '\n', bar, '\n\n'])
             if post['type'] == 'text':
-                body = html2rst(post['body'].encode('utf-8'))
+                body = html2rst(post['body'].encode('utf-8').replace('’', "'"))
                 f.writelines([body, '\n\n'])
             elif post['type'] == 'link':
-                desc = html2rst(post['description'].encode('utf-8'))
+                desc = html2rst(post['description'].replace('’', "'").encode('utf-8'))
                 f.writelines(['Link: `%s <%s>`_\n\n' % (post['title'].encode('utf-8'), post['url'].encode('utf-8'))])
                 f.write(desc + '\n\n'),
-            f.writelines(['.. author:: default\n', '.. categories:: %s\n' % ', '.join(post['tags']),
-                          '.. comments::\n'])
+            f.writelines([
+                '.. author:: default\n', '.. categories:: %s\n' % ', '.join(post['tags']),
+                '.. comments::\n', '   :url: %s' % post['post_url']
+            ])
     return post_links
