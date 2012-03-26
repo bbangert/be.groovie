@@ -32,13 +32,13 @@ website = 'http://be.groovie.org/'
 # **************************************************************
 
 # Add your Disqus shortname to enable comments powered by Disqus
-disqus_shortname = 'bbangert'
+disqus_shortname = 'groovieblog'
 
 # Change your favicon (new favicon goes in _static directory)
 html_favicon = 'tinkerer.ico'
 
 # Pick another Tinkerer theme or use your own
-html_theme = "modern"
+html_theme = "minimal"
 
 # Theme-specific options, see docs
 html_theme_options = {}
