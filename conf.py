@@ -52,7 +52,8 @@ rss_service = None
 # **************************************************************
 
 # Add other Sphinx extensions here
-extensions = ['tinkerer.ext.blog', 'tinkerer.ext.disqus']
+extensions = ['tinkerer.ext.blog', 'tinkerer.ext.disqus',
+              'sphinx.ext.graphviz']
 
 # Add other template paths here
 templates_path = ['_templates']
@@ -70,6 +71,8 @@ exclude_patterns = ["drafts/*"]
 html_sidebars = {
     "**": ["recent.html", "searchbox.html"]
 }
+
+graphviz_output_format = "svg"
 
 # **************************************************************
 # Do not modify below lines as the values are required by

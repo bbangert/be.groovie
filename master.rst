@@ -4,6 +4,7 @@ Sitemap
 .. toctree::
    :maxdepth: 1
 
+   2012/03/26/new_blog_software_again
    2010/11/13/notes_on_the_pylons_repoze_bfg_merger
    2010/10/19/why_extending_through_subclassing_a_frameworks
    2010/02/06/pylons_0_10_and_1_0_beta_1_released
