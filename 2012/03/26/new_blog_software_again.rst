@@ -1,21 +1,21 @@
 New Blog Software Again!
 ========================
 
-I've been using tumblr_ for a bit now, and while its useful when posting
-random stuff I probably should've just posted to Facebook (images, links, videos,
-etc.), writing my text in HTML was just... icky. Markdown isn't a huge
-improvement, and I was really itching to write all my posts in reST_ since I
+I've been using tumblr_ for awhile and while its useful when posting
+random stuff I should've posted to Facebook instead (images, links, videos,
+etc.), writing my text in HTML was just icky. Markdown isn't a huge
+improvement and I was really itching to write all my posts in reST_ as I
 already know it quite well from writing my docs using Sphinx_.
 
-I originally considered using blogofile_, but it seems to no longer be
-maintained and you have to go to some effort to even add Pygments code
-highlighting support. Then I saw tinkerer_, which is basically just a few
+I considered using blogofile_, but it seems to be
+abandoned and it's not trivial to add normal reST_ style code highlighting.
+Then I saw tinkerer_, which is basically just a few
 extensions on top of Sphinx_... perfect!
 
-The Good News
+The Migration
 -------------
 
-So first, for anyone considering migrating from tumblr_, here's my simple dump
+For anyone considering migrating from tumblr_, here's my simple dump
 script that pulled all my posts I cared about out of tumblr_ and dropped them
 into directories for tinkerer_ ::
 
@@ -71,12 +71,11 @@ into directories for tinkerer_ ::
                 ])
         return post_links
 
-Of course, the other nice bit is that I get all the Sphinx_ extensions for use
-in my blog. And the best bit, no more mental context switching to write a blog
-post.
+It's quite nice that I get all the Sphinx_ extensions for use
+in my blog, and there's no more mental context switching to write a blog
+post vs. writing project documentation for my open-source projects.
 
-And of course, its awesome to be able to drop a graphviz diagram into my blog
-with no effort. :)
+Dropping a graphviz diagram into my blog also became trivial.
 
 .. graphviz::
 
