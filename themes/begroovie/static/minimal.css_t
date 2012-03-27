@@ -20,6 +20,10 @@ body {
     padding: 0;
 }
 
+div.documentwrapper {
+    padding-left: 0;
+}
+
 a:link, a:visited, a:active {
     color: #aa2200;
     text-decoration: none;
@@ -78,11 +82,11 @@ div.header h2.tagline {
 
 /* Page navigation */
 div.page_nav {
-    background-color: black;
-    font-size: 125%;
+    background-color: #333;
+    font-size: 78%;
     font-weight: bold;
-    height: 2em;
-    line-height: 2em;
+    height: 1.3em;
+    line-height: 1.3em;
     width: 100%;
     margin-bottom: 20px;
 }
@@ -152,7 +156,6 @@ div.year ul {
 }
 
 div.year div.postmeta {
-    margin-left: 50%;
     margin-top: 12px;
 }
 
@@ -167,7 +170,6 @@ div.year div.timestamp {
 
 div.year h2 {
     margin-bottom: 0;
-    margin-left: 50%;
     margin-top: 0;
 }
 
