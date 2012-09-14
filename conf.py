@@ -73,6 +73,7 @@ html_sidebars = {
         "aboutme.html",
         "searchbox.html",
         "elsewhere.html",
+        "categories.html",
         "recent.html",
     ]
 }
