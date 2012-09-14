@@ -138,7 +138,7 @@ running website on VPS is remarkably quick:
                service.couchdb =
                service.files =
                default_host = pylonshq.com
-           
+
 
    In this case, the Pylons site needs CouchDB setup, and the files
    service (all Pylons sites should use the files service to store
@@ -216,6 +216,6 @@ myself.
 
 
 .. author:: default
-.. categories:: pylons, python
+.. categories:: Pylons, Python
 .. comments::
    :url: http://be.groovie.org/post/321827504/deploying-python-web-apps-with-toppcloud

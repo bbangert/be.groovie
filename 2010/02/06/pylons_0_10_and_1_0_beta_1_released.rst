@@ -87,6 +87,6 @@ are today.
 
 
 .. author:: default
-.. categories:: pylons, python
+.. categories:: Pylons, Python
 .. comments::
    :url: http://be.groovie.org/post/373440559/pylons-0-10-and-1-0-beta-1-released

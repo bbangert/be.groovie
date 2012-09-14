@@ -84,6 +84,6 @@ Preferably in the same package, or nearby.
 
 
 .. author:: default
-.. categories:: pylons, python
+.. categories:: Pylons, Python
 .. comments::
    :url: http://be.groovie.org/post/1347858988/why-extending-through-subclassing-a-frameworks

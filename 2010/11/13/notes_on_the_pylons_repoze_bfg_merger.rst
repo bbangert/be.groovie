@@ -108,6 +108,6 @@ lot of people are going to be excited at what’s in store.
 
 
 .. author:: default
-.. categories:: pylons, python
+.. categories:: Pylons, Python
 .. comments::
    :url: http://be.groovie.org/post/1558848023/notes-on-the-pylons-repoze-bfg-merger

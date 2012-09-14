@@ -116,5 +116,5 @@ since I get to use the Sphinx_ tools I'm quite familiar with.
 .. _tumblr: http://tumblr.com/
 
 .. author:: default
-.. categories:: python, sphinx
+.. categories:: Python, sphinx
 .. comments::
