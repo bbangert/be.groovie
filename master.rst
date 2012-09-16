@@ -4,6 +4,7 @@ Sitemap
 .. toctree::
    :maxdepth: 1
 
+   2012/09/16/build_a_smartos_server
    2012/03/26/new_blog_software_again
    2010/11/13/notes_on_the_pylons_repoze_bfg_merger
    2010/10/19/why_extending_through_subclassing_a_frameworks
