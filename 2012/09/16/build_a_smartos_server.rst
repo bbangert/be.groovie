@@ -1,3 +1,6 @@
+.. _building_smartos_server:
+
+
 Building A SmartOS Server
 =========================
 
