@@ -124,7 +124,7 @@ file-system. I turned on NFS for the file-systems I wanted to access
 and gave my computer's IP write privilege and the rest of the LAN
 read-only. This is insanely easy in ZFS_:
 
-.. code-block: bash
+.. code-block:: bash
 
     zfs set sharenfs=rw=MYIP,ro=192.168.2.0 zones/media/Audio
 
