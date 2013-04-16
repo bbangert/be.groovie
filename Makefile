@@ -67,4 +67,4 @@ build: $(BIN)/tinker
 	$(BIN)/tinker -b
 
 publish: $(BIN)/tinker
-	rsync -av blog/html/ groovie:www/blog/
+	rsync -av blog/html/ groovie:/var/www/be.groovie.org/
