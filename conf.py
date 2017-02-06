@@ -22,7 +22,7 @@ tagline = ''
 author = 'Ben Bangert'
 
 # Change this to your copyright string
-copyright = '2012, ' + author
+copyright = '2017, ' + author
 
 # Change this to your blog root URL (required for RSS feed)
 website = 'http://be.groovie.org/'
@@ -32,13 +32,13 @@ website = 'http://be.groovie.org/'
 # **************************************************************
 
 # Add your Disqus shortname to enable comments powered by Disqus
-disqus_shortname = 'groovieblog'
+# disqus_shortname = 'groovieblog'
 
 # Change your favicon (new favicon goes in _static directory)
 html_favicon = 'tinkerer.ico'
 
 # Pick another Tinkerer theme or use your own
-html_theme = "begroovie"
+html_theme = "minimal5"
 
 # Theme-specific options, see docs
 html_theme_options = {}

@@ -1,70 +1,10 @@
-APPNAME = pylonshq
-DEPS =
-HERE = $(shell pwd)
-BIN = $(HERE)/bin
-VIRTUALENV = virtualenv
-NOSE = bin/nosetests -s --with-xunit
-TESTS = $(APPNAME)/tests
-PYTHON = $(HERE)/bin/python
-BUILDAPP = $(HERE)/bin/buildapp
-BUILDRPMS = $(HERE)/bin/buildrpms
-PYPI = http://pypi.python.org/simple
-PYPIOPTIONS = -i $(PYPI)
-INSTALL = $(HERE)/bin/pip install
-PIP_CACHE = /tmp/pip_cache
-INSTALLOPTIONS = --download-cache $(PIP_CACHE)  -U -i $(PYPI)
+.PHONY: install build
 
-ifdef PYPIEXTRAS
-	PYPIOPTIONS += -e $(PYPIEXTRAS)
-	INSTALLOPTIONS += -f $(PYPIEXTRAS)
-endif
+install:
+	pip install -r requirements.txt
 
-ifdef PYPISTRICT
-	PYPIOPTIONS += -s
-	ifdef PYPIEXTRAS
-		HOST = `python -c "import urlparse; print urlparse.urlparse('$(PYPI)')[1] + ',' + urlparse.urlparse('$(PYPIEXTRAS)')[1]"`
+build:
+	tinker -b
 
-	else
-		HOST = `python -c "import urlparse; print urlparse.urlparse('$(PYPI)')[1]"`
-	endif
-
-endif
-
-INSTALL += $(INSTALLOPTIONS)
-SW = sw
-
-BUILD_DIRS = bin build deps include lib lib64
-
-
-.PHONY: all install build test
-
-all:	install
-
-$(BIN)/python:
-	python $(SW)/virtualenv.py --no-site-packages --distribute .
-	rm distribute-0.6.19.tar.gz
-	$(BIN)/pip install -U pip
-
-$(BIN)/pip: $(BIN)/python
-
-$(BIN)/nosetests:
-	$(INSTALL) nose
-	$(INSTALL) coverage
-
-$(BIN)/paster: lib $(BIN)/pip
-	$(INSTALL) -r requirements.txt
-	$(PYTHON) setup.py develop
-
-clean-env:
-	rm -rf $(BUILD_DIRS)
-
-clean:	clean-env
-
-install: $(BIN)/pip
-	$(INSTALL) -r requirements.txt
-
-build: $(BIN)/tinker
-	$(BIN)/tinker -b
-
-publish: $(BIN)/tinker
-	rsync -av blog/html/ groovie:/var/www/be.groovie.org/
+publish:
+	aws s3 cp --recursive --acl public-read blog/html s3://be-groovie-site/
