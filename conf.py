@@ -22,10 +22,10 @@ tagline = ''
 author = 'Ben Bangert'
 
 # Change this to your copyright string
-copyright = '2017, ' + author
+copyright = '2019, ' + author
 
 # Change this to your blog root URL (required for RSS feed)
-website = 'http://be.groovie.org/'
+website = 'https://be.groovie.org/'
 
 # **************************************************************
 # More tweaks you can do
@@ -38,7 +38,7 @@ website = 'http://be.groovie.org/'
 html_favicon = 'tinkerer.ico'
 
 # Pick another Tinkerer theme or use your own
-html_theme = "minimal5"
+html_theme = "minimal"
 
 # Theme-specific options, see docs
 html_theme_options = {}
